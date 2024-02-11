@@ -28,7 +28,7 @@
 		    compatible = "zmk,behavior-tri-state";
 		    label = "SWAPPER";
 		    #binding-cells = <0>;
-		    bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+		    bindings = <&kt LCTRL>, <&kp GRAVE>, <&kt LCTRL>;
 		    ignored-key-positions = <8 19 20 21 44>;
 		};
 	};
@@ -66,7 +66,7 @@
 /* SYM -------------------------------------------------------------------------------------------------------------------------------------
  * |       |       |   [   |   {   |   (   |   `   |-----------------------------------|   ^   |   )   |   }   |   ]   |       |       |
  * |       |   -   |   *   |   =   |   _   |   $   |-----------------------------------|   #   | ctrl  | shift |  alt  |  gui  |       |
- * |       |   +   |   |   |   @   |   \   |   %   |OsAltGr|-------------------| MENU  |   ~   |   &   |   ;   |   :   |   /   |       |
+ * |       |   +   |   |   |   @   |   \   |   %   |OsAltGr|-------------------| MENU  |   ~   |   &   |   ;   |   :   |   !   |       |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
@@ -84,13 +84,13 @@
  * -------------------------------------------------------------------------------------------------------------------------------------
  * |       |       | swap  | BKSPC | del   |       |-----------------------------------| mute  | home  |  up   |  end  |       |       |
  * |       |  gui  |  alt  | shift | ctrl  |vol dn |-----------------------------------|vol up | left  | down  | right |       |       |
- * |       |  undo |       | copy  | paste | prev  |BT CLR |-------------------|       | next  |       |       |       |play/pa|       |
+ * |       |  undo |  cut  | copy  | paste | prev  |BT CLR |-------------------|       | next  |       |       |       |play/pa|       |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
 &trans        &none         &swapper      &kp  BSPC     &kp  DEL      &none                                                                      &kp  C_MUTE     &kp HOME    &kp UP      &kp END    &none    &none
 &trans        &kp LGUI      &kp  LALT     &kp LSHFT     &kp LCTRL     &kp  C_VOL_DN                                                              &kp  C_VOL_UP   &kp LEFT    &kp DOWN    &kp RIGHT  &none    &none
-&trans        &kp Undo      &none         &kp Copy      &kp Paste     &kp  C_PREV   &bt BT_CLR                                         &none     &kp  C_NEXT     &none       &none       &none      &kp C_PP &trans
+&trans        &kp Undo      &kp Cut       &kp Copy      &kp Paste     &kp  C_PREV   &bt BT_CLR                                         &none     &kp  C_NEXT     &none       &none       &none      &kp C_PP &trans
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &trans    &trans          &trans                  &kp  RCTRL   
                         >;
 			
